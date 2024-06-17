@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation de commande</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #50b3a2;
+            color: #ffffff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #e8491d 3px solid;
+        }
+        header a {
+            color: #ffffff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        .form-container {
+            background: #ffffff;
+            padding: 20px;
+            margin-top: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input[type="text"], input[type="email"], input[type="tel"], input[type="number"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .btn {
+            display: block;
+            width: 100%;
+            background: #50b3a2;
+            color: #ffffff;
+            border: none;
+            padding: 15px;
+            cursor: pointer;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+        .btn:hover {
+            background: #45a089;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Votre Panier</h1>
+        </div>
+    </header>
+
+    <div class="container form-container">
+        <h2>Coordonnées de livraison</h2>
+        <form action="/valider_commande" method="POST">
+            <label for="nom">Nom:</label>
+            <input type="text" id="nom" name="nom" required>
+            
+            <label for="adresse">Adresse:</label>
+            <input type="text" id="adresse" name="adresse" required>
+            
+            <label for="ville">Ville:</label>
+            <input type="text" id="ville" name="ville" required>
+            
+            <label for="code_postal">Code Postal:</label>
+            <input type="text" id="code_postal" name="code_postal" required>
+            
+            <label for="telephone">Téléphone:</label>
+            <input type="tel" id="telephone" name="telephone" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <h2>Informations de la carte bancaire</h2>
+            <label for="numero_carte">Numéro de la carte:</label>
+            <input type="number" id="numero_carte" name="numero_carte" required>
+            
+            <label for="nom_carte">Nom sur la carte:</label>
+            <input type="text" id="nom_carte" name="nom_carte" required>
+            
+            <label for="expiration">Date d'expiration (MM/AA):</label>
+            <input type="text" id="expiration" name="expiration" placeholder="MM/AA" required>
+            
+            <label for="cvv">CVV:</label>
+            <input type="password" id="cvv" name="cvv" required>
+
+            <button type="submit" class="btn">Valider la commande</button>
+        </form>
+    </div>
+</body>
+</html>
