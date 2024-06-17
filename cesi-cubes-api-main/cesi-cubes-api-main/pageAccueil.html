@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domaine des Vins</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+        }
+        .filters, .wine-selection, .categories, .newsletter, .contact {
+            background-color: white;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .filters h2, .wine-selection h2, .categories h2, .newsletter h2, .contact h2 {
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+        }
+        .filters select, .filters input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        .wine-item {
+            margin-bottom: 20px;
+        }
+        .wine-item h3 {
+            margin: 0;
+        }
+        .wine-item p {
+            margin: 5px 0;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Domaine des Vins</h1>
+    <p>Explorez notre collection de vins d'exception</p>
+</header>
+
+<div class="container">
+
+    <div class="filters">
+        <h2>Filtres de recherche</h2>
+        <label for="wine-type">Type de vin :</label>
+        <select id="wine-type">
+            <option value="rouge">Rouge</option>
+            <option value="blanc">Blanc</option>
+            <option value="rose">Rosé</option>
+            <option value="effervescent">Effervescent</option>
+            <option value="dessert">Dessert</option>
+            <option value="fortifie">Fortifié</option>
+        </select>
+
+        <label for="region">Région :</label>
+        <select id="region">
+            <option value="bordeaux">Bordeaux</option>
+            <option value="bourgogne">Bourgogne</option>
+            <option value="napa-valley">Napa Valley</option>
+            <option value="toscane">Toscane</option>
+            <option value="rioja">Rioja</option>
+            <option value="champagne">Champagne</option>
+            <option value="autres-regions">Autres régions...</option>
+        </select>
+
+        <label for="cepage">Cépage :</label>
+        <select id="cepage">
+            <option value="cabernet-sauvignon">Cabernet Sauvignon</option>
+            <option value="merlot">Merlot</option>
+            <option value="chardonnay">Chardonnay</option>
+            <option value="pinot-noir">Pinot Noir</option>
+            <option value="syrah">Syrah</option>
+            <option value="sauvignon-blanc">Sauvignon Blanc</option>
+            <option value="autres-cepages">Autres cépages...</option>
+        </select>
+
+        <label for="year">Année :</label>
+        <input type="range" id="year" name="year" min="1950" max="2023">
+
+        <label for="price">Prix :</label>
+        <input type="range" id="price" name="price" min="0" max="500">
+
+        <label for="rating">Notes des critiques :</label>
+        <select id="rating">
+            <option value="1">1 étoile</option>
+            <option value="2">2 étoiles</option>
+            <option value="3">3 étoiles</option>
+            <option value="4">4 étoiles</option>
+            <option value="5">5 étoiles</option>
+        </select>
+    </div>
+
+    <div class="wine-selection">
+        <h2>Sélection du mois</h2>
+        <div class="wine-item">
+            <h3>Château Margaux 2015</h3>
+            <p><strong>Région :</strong> Bordeaux</p>
+            <p><strong>Cépage :</strong> Cabernet Sauvignon, Merlot</p>
+            <p><strong>Prix :</strong> 450€</p>
+            <p><strong>Note :</strong> 97/100 (Wine Spectator)</p>
+            <p><strong>Description :</strong> Un vin riche et complexe avec des arômes de fruits noirs, de tabac et de chocolat.</p>
+        </div>
+        <div class="wine-item">
+            <h3>Domaine de la Romanée-Conti Montrachet 2017</h3>
+            <p><strong>Région :</strong> Bourgogne</p>
+            <p><strong>Cépage :</strong> Chardonnay</p>
+            <p><strong>Prix :</strong> 1200€</p>
+            <p><strong>Note :</strong> 99/100 (Robert Parker)</p>
+            <p><strong>Description :</strong> Un vin exceptionnel avec des notes de fruits tropicaux, de fleurs blanches et une minéralité prononcée.</p>
+        </div>
+    </div>
+
+    <div class="categories">
+        <h2>Découvrir nos catégories</h2>
+        <ul>
+            <li><a href="#">Nouveautés</a> - Découvrez les dernières arrivées dans notre collection.</li>
+            <li><a href="#">Vins rares</a> - Une sélection exclusive de vins rares et prestigieux.</li>
+            <li><a href="#">Vins bio et naturels</a> - Des vins produits selon des méthodes respectueuses de l'environnement.</li>
+            <li><a href="#">Vins à moins de 20€</a> - Trouvez des vins de qualité à des prix abordables.</li>
+            <li><a href="#">Meilleures ventes</a> - Les vins les plus populaires auprès de nos clients.</li>
+        </ul>
+    </div>
+
+    <div class="newsletter">
+        <h2>Inscrivez-vous à notre newsletter</h2>
+        <p>Restez informé des dernières nouveautés, des offres exclusives et des événements en vous inscrivant à notre newsletter.</p>
+        <form action="#">
+            <input type="email" placeholder="Votre email" required>
+            <button type="submit">S'inscrire</button>
+        </form>
+    </div>
+
+    <div class="contact">
+        <h2>Contactez-nous</h2>
+        <p><strong>Adresse :</strong> 123 Rue des Vins, 75001 Paris, France</p>
+        <p><strong>Téléphone :</strong> +33 1 23 45 67 89</p>
+        <p><strong>Email :</strong> <a href="mailto:contact@domainedesvins.fr">contact@domainedesvins.fr</a></p>
+        <p>Suivez-nous sur :</p>
+        <p>
+            <a href="#">Facebook</a> | 
+            <a href="#">Instagram</a> | 
+            <a href="#">Twitter</a>
+        </p>
+    </div>
+
+</div>
+
+<footer>
+    <p>© 2024 Domaine des Vins. Tous droits réservés.</p>
+</footer>
+
+</body>
+</html>
