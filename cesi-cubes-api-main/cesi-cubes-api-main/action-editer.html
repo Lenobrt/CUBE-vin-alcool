@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="logo.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To do Liste </title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+     <style>
+      .logo {
+        width: 40px;
+        filter: invert(100%) sepia(100%) saturate(13%) hue-rotate(237deg)
+          brightness(104%) contrast(104%);
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="/"
+          ><img src="logo.svg" class="logo" /> Bucket List</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="ms-auto navbar-nav">
+            <a class="nav-item nav-link active" href="action-liste.html">wishes </a>
+            <a class="nav-item nav-link" href="categ-liste.html" href="/">categories</a>
+            <a class="nav-item nav-link" href="user-liste.html" href="/">users</a>
+           
+          </div>
+          <a  class="ms-2 btn btn-outline-secondary">Brad PITT <i class="fa-solid fa-right-from-bracket"></i></a>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+        <div class="col-3 my-5">
+            <h1>Editer</h1>
+            <form name="wish_type2" method="post">
+        
+            <div id="wish_type2"><div class="mb-3"><label for="wish_type2_title" class="form-label required">Title</label><input type="text" id="wish_type2_title" name="wish_type2[title]" required="required" maxlength="255" class="form-control" value="Revoir les amis de Bretagne" />        </div><div class="mb-3"><label for="wish_type2_description" class="form-label">Description</label><textarea id="wish_type2_description" name="wish_type2[description]" class="form-control">lorem</textarea>        </div><div class="mb-3"><label for="wish_type2_author" class="form-label required">Author</label><input type="text" id="wish_type2_author" name="wish_type2[author]" required="required" maxlength="50" class="form-control" value="Jeff" />        </div><div class="mb-3"><label class="form-label required" for="wish_type2_ispublished">Ispublished</label><select id="wish_type2_ispublished" name="wish_type2[ispublished]" class="form-select"><option value="1" selected="selected">En ligne</option><option value="0">OFF</option></select>        </div><div class="mb-3"><label class="form-label required" for="wish_type2_category">Category</label><select id="wish_type2_category" name="wish_type2[category]" class="form-select"><option value="1">Travel &amp; Adventure </option><option value="2">Sport</option><option value="3">Entertainment</option><option value="4" selected="selected">Human Relations</option><option value="5">Others</option></select>        </div><input type="hidden" id="wish_type2__token" name="wish_type2[_token]" value="9.ACMj80CzzzdGhPybcrMm0Qcna0Jm2O1P2wepY5yieIA.ZxFauQPEjWEr0Jf5H-YXi3BmKhMRkIs_n1TrLK7jLMtJYUuQL9T7fSXXkw" /></div>
+            <button class="btn btn-primary" type="submit">OK</button>
+            </form>
+            </div>
+        </div>
+    <footer class="py-5 bg-dark">
+      <div class="container px-4 px-lg-5">
+        <p class="m-0 text-center text-white">
+          Copyright &copy; Seven Valley 2023
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
